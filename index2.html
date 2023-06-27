@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            width: 80%;
+            height: 20vh;
+            border:4px solid black;
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            padding-left: 80px;
+        }
+        nav > div{
+            height: 50px;
+            width: 50px;
+            border: 8px solid black;
+        }
+        section{
+            display: grid;
+            width: 80%;
+            border: 4px solid darkorange;
+            height: 100vh;
+            min-height: 600px;
+            margin: auto;
+            padding: 10px;
+            grid-template-columns:2fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+                "arriba lateral"
+                "bot lateral";    
+        }
+        main{
+            grid-area: arriba;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        main >article{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        main *> div{
+            width: 100%;
+            border: 8px solid black;
+            flex-grow: 1;
+        }
+        main *> span{
+            width: 100%;
+            height: 50px;
+            border: 8px solid black; 
+        }
+        aside{
+            grid-area: lateral;
+            /* border: 3px solid greenyellow; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;  
+            padding: 20px; 
+        }
+        aside > div{
+            width: 100%;
+            border: 8px solid black;
+            flex-grow: 1;            
+        }
+        #rojo{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(199, 43, 43,8);
+            position: relative;
+            left: 20px;
+            bottom:20px;
+            z-index: -1;
+        }
+        aside > span{
+            width: 100%;
+            height: 50px;
+            border: 8px solid black; 
+        }
+        #cuatro{
+            /* border: 3px solid violet; */
+            padding: 20px;
+            display: flex;
+            grid-area: bot;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        #image{
+            border: 8px solid black;
+            width: 100%;
+            margin: auto;
+            flex-grow: 1;
+        }
+        #texto{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px            
+        }
+        #texto > article{
+            height: 50px;
+            border: 8px solid black; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div></div>
+        <div></div>
+        <div></div>
+    </nav>
+    <section>
+        <main>
+            <article id="uno">
+                <div></div>
+                <span></span>
+                <span></span>
+            </article>
+            <article id="dos">
+                <div></div>
+                <span></span>
+                <span></span>
+            </article>
+        </main>
+        <aside>
+            <div>
+                <div id="rojo"></div>
+            </div>
+            <span></span>
+            <span></span>
+        </aside>
+        <div id="cuatro">
+            <div id="image"></div>
+            <div id="texto">
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </div>   
+        </div>
+    </section>
+</body>
+</html>

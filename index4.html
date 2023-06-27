@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section{
+            border: 2px solid red;
+            display: flex;
+            height: 100vh;
+            min-height: 500px;
+        }
+
+        aside{
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid darkcyan;
+            align-items: center;
+        }
+
+        aside div{
+            border: 3px solid black;
+            height:80px;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        #contain{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            border: 1px solid royalblue;
+        }
+
+        article, #amarillo, #verde{
+            border: 1px solid red;
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .art{
+            background-color: orange;
+            height: 80%;
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        #box{
+            width: 90%;
+            height: 80%;
+            background-color: yellow;
+            border: 2px solid brown;
+        }
+
+        #verde{
+            background-color: green;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <aside>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </aside>
+        <div id="contain">
+            <article>
+                <div class="art">art1</div>
+                <div class="art">art2</div>
+            </article>
+            <div id="amarillo">
+                <div id="box"></div>
+            </div>
+            <div id="verde"></div>
+        </div>
+    </section>
+</body>
+</html>

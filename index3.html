@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    section {
+        display: grid;
+        grid-template-areas: 
+                "encabezado encabezado encabezado"
+                "izq cuerpo der"
+            ;
+        grid-template-columns: 300px 1fr 200px;
+        grid-template-rows: 80px 300px;     
+    }
+    section *{
+        border:4px solid black
+    }
+    h1{
+        border:none
+    }
+    header{
+        border:4px solid black;
+        grid-area: encabezado;
+        display: grid;
+        grid-template-columns: 200px 1fr 300px;
+        grid-template-rows: 100%;
+        color: red;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    }
+    #izq{
+        background-color: orangered;
+        height: 100%
+    }
+    #der{
+        background-color: yellow;
+        height: 100%
+    }
+    #uno{
+        grid-area: izq;
+        display: grid;
+        grid-template-rows: repeat(3, 60px);
+        grid-template-columns: 280px;
+        justify-content: center;
+        gap: 30px;
+        padding: 30px
+    } 
+
+
+    main{
+        grid-area: cuerpo;
+        border:4px solid steelblue;
+        display: grid;
+        grid-template-rows: 40%;
+        grid-template-columns: repeat(2,40%);
+        justify-content: space-evenly;
+        gap: 10px;
+        padding-top: 20px;
+    }
+    #dos{
+        grid-area: der;
+        border:4px solid black
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <div id="izq"></div>
+            <h1>LOGO</h1>
+            <div id="der"></div>
+        </header>
+        <aside id="uno">
+            <div></div>
+            <div></div>
+            <div></div>
+        </aside>
+        <main>
+            <article></article>
+            <article></article>
+        </main>
+        <aside id="dos"></aside> 
+    </section>
+</body>
+</html>
